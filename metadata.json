@@ -1,0 +1,6 @@
+{
+  "name": "NICK LU Portfolio & Design Hub",
+  "description": "Interactive industrial design portfolio for Nick Lu, featuring advanced CMF showcases and an AI design critique engine.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
