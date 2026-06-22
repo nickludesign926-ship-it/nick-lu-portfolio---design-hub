@@ -185,44 +185,44 @@ export const PROJECTS: Project[] = [
     challengeTitle: "The Challenge & Objective",
     challengeDescription: "In an era dominated by transient digital experiences, the challenge was to create a physical artifact that embodies 'Acoustic Permanence.' The objective was to redesign the internal chamber architecture to minimize standing waves while maintaining a form factor that speaks to the professional audiophile.",
     challengeDescriptionEn: "We focused on the intersection of high-precision CNC machining and ergonomic comfort, ensuring the weight distribution remains balanced for extended studio sessions. Every radius and chamfer was calculated to serve both acoustic performance and tactile elegance.",
-    coverImage: "/src/assets/images/regenerated_image_1781757091891.png",
+    coverImage: "/src/assets/images/regenerated_image_1781757091891.webp",
     subWorks: [
       {
         title: "Graphic Design, Poster & Packaging Suite",
         category: "Graphic Design",
-        image: "/src/assets/images/包装/1.png",
+        image: "/src/assets/images/包装/1.webp",
         cursorLabel: "VIEW",
         description: "Custom-developed brand packaging setups, thematic promotional posters, and creative comic designs crafted to augment narrative-driven product identity and engagement.",
         images: [
-          "/src/assets/images/包装/1.png",
-          "/src/assets/images/包装/2.png",
-          "/src/assets/images/包装/3.png"
+          "/src/assets/images/包装/1.webp",
+          "/src/assets/images/包装/2.webp",
+          "/src/assets/images/包装/3.webp"
         ]
       },
       {
         title: "IFA 2026 Booth Design",
         category: "Spatial Design",
-        image: "/src/assets/images/Space design showcase/Image20260619182355.png",
+        image: "/src/assets/images/Space design showcase/Image20260619182355.webp",
         cursorLabel: "SPACE",
         description: "The official spatial presentation and interactive product experience zones at the IFA Berlin exhibition hall, maximizing crowd engagement and fluid demo structures.",
         images: [
-          "/src/assets/images/Space design showcase/Image20260619182355.png",
-          "/src/assets/images/Space design showcase/0b48c4f1a240877267dfeed5f1d9f88c.png",
-          "/src/assets/images/Space design showcase/{A0EBCBED-CB42-49CC-9C55-F5EE0670A8C3}.png",
-          "/src/assets/images/Space design showcase/e1aceade5b928106fc0ba45a3b28e964.png"
+          "/src/assets/images/Space design showcase/Image20260619182355.webp",
+          "/src/assets/images/Space design showcase/0b48c4f1a240877267dfeed5f1d9f88c.webp",
+          "/src/assets/images/Space design showcase/{A0EBCBED-CB42-49CC-9C55-F5EE0670A8C3}.webp",
+          "/src/assets/images/Space design showcase/e1aceade5b928106fc0ba45a3b28e964.webp"
         ]
       },
       {
         title: "Accutone Polar Mini 8: Complete Product Lifecycle & Development",
         category: "Product Development & Launch",
-        image: "/src/assets/images/POLAR MINI 8 Poster.png",
+        image: "/src/assets/images/POLAR MINI 8 Poster.webp",
         cursorLabel: "CMF",
         description: "A comprehensive showcase of the Accutone Polar Mini 8 design lifecycle, documenting every critical milestone from initial 3D digital CAD construction and CMF prototyping validation to hyper-realistic Keyshot rendering and official launch key visual design.",
         images: [
-          "/src/assets/images/POLAR MINI 8 Poster.png",
-          "/src/assets/images/建模/1.jpg",
-          "/src/assets/images/建模/2.png",
-          "/src/assets/images/建模/3.jpg"
+          "/src/assets/images/POLAR MINI 8 Poster.webp",
+          "/src/assets/images/建模/1.webp",
+          "/src/assets/images/建模/2.webp",
+          "/src/assets/images/建模/3.webp"
         ],
         imageDetails: [
           {
@@ -251,14 +251,14 @@ export const PROJECTS: Project[] = [
       {
         title: "Converse 95 Product Reel",
         category: "Product Commercial",
-        image: "https://images.unsplash.com/photo-1546435770-a3e426bf472b?q=80&w=2065",
+        image: "/src/assets/images/Converse-95-Packaging-Redesign.jpg",
         cursorLabel: "PLAY",
         description: "Modern commercial showcasing the Converse 95 premium active headset, with standard-setting ergonomics and digital hybrid ANC controls.",
         isVideo: true,
         videoUrl: "https://assets.mixkit.co/videos/preview/mixkit-headphones-on-a-neon-illuminated-background-44331-large.mp4",
         youtubeUrl: "https://youtu.be/koPXruGzKpo",
         images: [
-          "https://images.unsplash.com/photo-1546435770-a3e426bf472b?q=80&w=2065",
+          "/src/assets/images/Converse-95-Packaging-Redesign.jpg",
           "https://images.unsplash.com/photo-1524678606370-a47ad25cb82a?q=80&w=2070",
           "https://images.unsplash.com/photo-1516223725307-6f76b9ec8742?q=80&w=2074"
         ]
@@ -266,14 +266,14 @@ export const PROJECTS: Project[] = [
       {
         title: "Accutone UB 380 Spec Reel",
         category: "Product Commercial",
-        image: "https://images.unsplash.com/photo-1484704849700-f032a568e944?q=80&w=2070",
+        image: "/src/assets/images/UB380-Packaging-Redesign.jpg",
         cursorLabel: "PLAY",
         description: "Technical spec breakdown video exhibiting the Accutone UB 380 with 300-degree rotating boom, noise cancellation, and flexible high-grade styling.",
         isVideo: true,
         videoUrl: "https://assets.mixkit.co/videos/preview/mixkit-headphones-resting-on-a-desk-with-glowing-neon-light-44335-large.mp4",
         youtubeUrl: "https://youtu.be/LjJ779ugsCw",
         images: [
-          "https://images.unsplash.com/photo-1484704849700-f032a568e944?q=80&w=2070",
+          "/src/assets/images/UB380-Packaging-Redesign.jpg",
           "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=2070",
           "https://images.unsplash.com/photo-1546435770-a3e426bf472b?q=80&w=2065"
         ]
@@ -313,7 +313,7 @@ export const PROJECTS: Project[] = [
     challengeTitle: "Inclusive Design for Mobility Enhancement",
     challengeDescription: "The transition to requiring physical assistance for personal hygiene is a deeply challenging life experience, often accompanied by a loss of individual independence and personal dignity. Existing assistive technologies focus almost exclusively on basic functional utility, neglecting the psychological and emotional well-being of the users. AuraMist addresses this gap by introducing the first portable, zero-installation, intelligent water-misting system designed for wheelchair-bound and mobility-impaired individuals.",
     challengeDescriptionEn: "Formulated using a rigorous participatory design methodology, the system integrates dual-intensity misting technology with AI-powered controls. Clinical and fluid-dynamics validation proved that AuraMist cuts water consumption by 76% compared to standard showers, while maintaining standard heat envelope distribution and skin comfort. This project represents a scalable model of academic excellence translating into a high-impact commercial product.",
-    coverImage: "/src/assets/images/regenerated_image_1781772629136.jpg",
+    coverImage: "/src/assets/images/regenerated_image_1781772629136.webp",
     youtubeId: "JCjDWmrhugM",
     metrics: [
       { label: "Water Saving", value: "76%" },
@@ -393,55 +393,55 @@ export const PROJECTS: Project[] = [
       {
         title: "System Prototyping & Components",
         description: "This image displays the initial hardware configuration, including Arduino controls, servo motors, and joystick inputs alongside the 3D-printed modular arm components, illustrating the foundational mechanical and electronic assembly.",
-        image: "/src/assets/images/auramist/1.jpg",
+        image: "/src/assets/images/auramist/1.webp",
         badge: "PROTOTYPING"
       },
       {
         title: "Design Schematics",
         description: "A comprehensive technical breakdown of the system, mapping out the mist nozzle placement, integrated circuitry, water tank location, and motor-driven arm movement for single and double-rail configurations.",
-        image: "/src/assets/images/auramist/2.jpg",
+        image: "/src/assets/images/auramist/2.webp",
         badge: "DESIGN SCHEMATICS"
       },
       {
         title: "Thermal Testing",
         description: "Functional validation using thermal imaging and precision thermometers to monitor temperature outputs, ensuring the misting system maintains a safe, consistent thermal environment for the user.",
-        image: "/src/assets/images/auramist/3.jpg",
+        image: "/src/assets/images/auramist/3.webp",
         badge: "THERMAL TESTING"
       },
       {
         title: "Heat Distribution Analysis",
         description: "Visual data analysis captured via infrared thermography, confirming the effective heat distribution and coverage of the misting mechanism across the user's upper body area.",
-        image: "/src/assets/images/auramist/4.jpg",
+        image: "/src/assets/images/auramist/4.webp",
         badge: "THERMAL ANALYSIS"
       },
       {
         title: "Material Surface Interaction",
         description: "A microscopic or experimental view of droplet formation and surface interaction, highlighting the fluid dynamics research conducted to ensure uniform mist distribution.",
-        image: "/src/assets/images/auramist/5.jpg",
+        image: "/src/assets/images/auramist/5.webp",
         badge: "FLUID DYNAMICS"
       },
       {
         title: "Full System Integration (Test Environment)",
         description: "The assembled prototype featuring the Hydroverse main unit and misting arm positioned with a mannequin, demonstrating the completed mechanical integration before real-world user testing.",
-        image: "/src/assets/images/auramist/6.jpg",
+        image: "/src/assets/images/auramist/6.webp",
         badge: "INTEGRATION"
       },
       {
         title: "Iteration & Functional Testing",
         description: "A controlled testing environment showing the system operational with a wheelchair user surrogate, validating ergonomics and physical clearance.",
-        image: "/src/assets/images/auramist/7.jpg",
+        image: "/src/assets/images/auramist/7.webp",
         badge: "FUNCTIONAL TESTING"
       },
       {
         title: "Public Exhibition",
         description: "The Hydroverse system showcased at a public innovation event, where the team engages with visitors, demonstrating the real-world accessibility impact for users with mobility impairments.",
-        image: "/src/assets/images/auramist/8.jpg",
+        image: "/src/assets/images/auramist/8.webp",
         badge: "EXHIBITION"
       },
       {
         title: "Project Recognition & Team",
         description: "The team representing the project at the \"InnoCarnival 2025\" under the Hong Kong Baptist University Knowledge Transfer Office, celebrating the successful public demonstration and development of the initiative.",
-        image: "/src/assets/images/auramist/9.jpg",
+        image: "/src/assets/images/auramist/9.webp",
         badge: "RECOGNITION"
       }
     ],
@@ -449,31 +449,31 @@ export const PROJECTS: Project[] = [
       {
         title: "Conceptual Design Appearance",
         description: "Optimize the overall appearance design using generative AI tools.",
-        image: "/src/assets/images/auramist/10.jpeg",
+        image: "/src/assets/images/auramist/10.webp",
         badge: "AESTHETIC SCHEME"
       },
       {
         title: "Conceptual Design Appearance",
         description: "Optimize the overall appearance design using generative AI tools.",
-        image: "/src/assets/images/auramist/11.jpeg",
+        image: "/src/assets/images/auramist/11.webp",
         badge: "DETAIL DESIGN"
       },
       {
         title: "Conceptual Design Appearance",
         description: "Optimize the overall appearance design using generative AI tools.",
-        image: "/src/assets/images/auramist/12.jpeg",
+        image: "/src/assets/images/auramist/12.webp",
         badge: "SYS ARCHITECTURE"
       },
       {
         title: "Conceptual Design Appearance",
         description: "Optimize the overall appearance design using generative AI tools.",
-        image: "/src/assets/images/auramist/13.jpeg",
+        image: "/src/assets/images/auramist/13.webp",
         badge: "ERGONOMICS STUDY"
       },
       {
         title: "Conceptual Design Appearance",
         description: "Optimize the overall appearance design using generative AI tools.",
-        image: "/src/assets/images/auramist/14.jpeg",
+        image: "/src/assets/images/auramist/14.webp",
         badge: "CLINICAL CONCEPT"
       }
     ],
@@ -616,7 +616,7 @@ export const PROJECTS: Project[] = [
     challengeTitle: "Freudian Defense & Lion-fish Bio-Metaphor",
     challengeDescription: "This device utilizes heart rate sensors to drive mechanical components, dynamically simulating the defensive expansion of a lionfish. As accumulated negative emotions ferment (manifested through defense mechanisms like social avoidance or emotional numbness), the artwork references Anna Freud's (1936) psychological defense structures—specifically displacement, redirecting internal anxiety toward concrete, safe physical releases—to provide a tactile medium for invisible human states.",
     challengeDescriptionEn: "Inspired by the Pterois (Lion-fish) which transforms venomous spines into dynamic shields as a silent language of deep-sea survival, this wearable interactive helmet externalizes the invisible 'black box of the human mind'. Utilizing clinical baselines where 90 bpm serves as the critical index for anxiety, the system interprets heart-rate spikes to actuate active servo networks. When anxiety triggers, structural fins expand dynamically, allowing wearers to transfer and communicate negative states smoothly.",
-    coverImage: "/src/assets/images/regenerated_image_1781773447864.jpg",
+    coverImage: "/src/assets/images/regenerated_image_1781773447864.webp",
     youtubeId: "3dnjJjw20d0", 
     metrics: [
       { label: "Critical Trigger", value: "90 BPM" },
@@ -627,77 +627,77 @@ export const PROJECTS: Project[] = [
       {
         title: "Project Identity",
         category: "01 / Identity",
-        image: "/src/assets/images/Defensive pulse armature/1.jpg",
+        image: "/src/assets/images/Defensive pulse armature/1.webp",
         cursorLabel: "IDENTITY",
         description: "Defensive Pulse Armature. Key Tags: 3D printing, Mechanical structure, Emotion visualization, Interactive installation. Main high-quality render of the helmet device."
       },
       {
         title: "Background (The Theory)",
         category: "02 / Psychology",
-        image: "/src/assets/images/Defensive pulse armature/2.jpg",
+        image: "/src/assets/images/Defensive pulse armature/2.webp",
         cursorLabel: "THEORY",
         description: "Concept: Quote Sigmund Freud regarding unexpressed emotions. Mechanism: Describe the vicious cycle of 'internal friction' and brain-activated defense mechanisms such as repression, denial, projection, regression, and displacement."
       },
       {
         title: "Displacement (Deep Dive)",
         category: "03 / Displacement",
-        image: "/src/assets/images/Defensive pulse armature/3.jpg",
+        image: "/src/assets/images/Defensive pulse armature/3.webp",
         cursorLabel: "DEEP DIVE",
         description: "Definition: Explain displacement as a defense mechanism where dangerous emotions are transferred to a safer situation. Supporting Evidence: Include the research context from Anna Freud (1936) and the referenced studies on stress and emotional catharsis."
       },
       {
         title: "Thinking Process (Data & Biometrics)",
         category: "04 / Data Logic",
-        image: "/src/assets/images/Defensive pulse armature/4.jpg",
+        image: "/src/assets/images/Defensive pulse armature/4.webp",
         cursorLabel: "BIO-LOGIC",
         description: "Logic: Detail the connection between anxious states and heart rate. State that 90 bpm is the critical value for judging anxiety."
       },
       {
         title: "Thinking Process (Interaction Flow)",
         category: "04 / Flowchart",
-        image: "/src/assets/images/Defensive pulse armature/5.jpg",
+        image: "/src/assets/images/Defensive pulse armature/5.webp",
         cursorLabel: "FLOWCHART",
         description: "Interaction Flow: Display the flowchart of the responsive feedback loop: Emotions ──> Wearable Device ──> Externalization (via heart rate, body temperature, and brain wave detection)."
       },
       {
         title: "Inspiration (Nature & Positioning)",
         category: "05 / Inspiration",
-        image: "/src/assets/images/Defensive pulse armature/6.jpg",
+        image: "/src/assets/images/Defensive pulse armature/6.webp",
         cursorLabel: "BIOMETRIC",
         description: "Inspiration: Lion-fish (Pterois) transforming venomous spines into a silent language of survival. Design Positioning: Use a comparison framework to map the design: Defensive vs. Offensive, Invisibility vs. Visibility, and Organic vs. Mechanical."
       },
       {
         title: "Transformation (The Bridge)",
         category: "06 / Transition",
-        image: "/src/assets/images/Defensive pulse armature/7.jpg",
+        image: "/src/assets/images/Defensive pulse armature/7.webp",
         cursorLabel: "BRIDGE",
         description: "Mapping: Present the transition from Emotional Displacement ──> Lion-fish Mechanism ──> Wearable Interaction. Value Proposition: Emphasize how the device provides a new form of interactive emotional communication by visualizing internal states."
       },
       {
         title: "System Design (Technical Implementation)",
         category: "07 / Tech Core",
-        image: "/src/assets/images/Defensive pulse armature/8.jpg",
+        image: "/src/assets/images/Defensive pulse armature/8.webp",
         cursorLabel: "HARDWARE",
         description: "Hardware: Arduino Uno as the mainboard. Mechanism: Explain the use of Servo motor A (dorsal fin simulation) and Servo motor B (pectoral fin simulation), controlled by heart rate data."
       },
       {
         title: "Development (Sketch & Ideation)",
         category: "08 / Development",
-        image: "/src/assets/images/Defensive pulse armature/9.jpg",
+        image: "/src/assets/images/Defensive pulse armature/9.webp",
         cursorLabel: "IDEATION",
         description: "Ideation: Present initial sketches focusing on structural aesthetics, futuristic form, and kinetic art."
       },
       {
         title: "Development (Prototyping Iterations)",
         category: "08 / Linkage",
-        image: "/src/assets/images/Defensive pulse armature/10.jpg",
+        image: "/src/assets/images/Defensive pulse armature/10.webp",
         cursorLabel: "PROTOTYPES",
         description: "Prototyping Iterations: Document the two-stage testing process. Highlight the refinement of the fin skeleton to move from a 'messy' movement to a functional linear motion structure."
       },
       {
         title: "Refinement (The Final Form)",
         category: "09 / Refinement",
-        image: "/src/assets/images/Defensive pulse armature/11.jpg",
+        image: "/src/assets/images/Defensive pulse armature/11.webp",
         cursorLabel: "FINAL FORM",
         description: "Final Details: Showcase the redesigned backbone and support skeleton based on the linear motion requirement."
       }
@@ -706,19 +706,19 @@ export const PROJECTS: Project[] = [
       {
         title: "01 / Prototyping: Small-Scale Validation Model",
         description: "A handheld physical model used to test the overall look, feel, and structural curves of the skull-fitting helmet. It verified the physical silhouette before executing full-scale 3D prints.",
-        image: "/src/assets/images/regenerated_image_1781100784824.jpg",
+        image: "/src/assets/images/regenerated_image_1781100784824.webp",
         badge: "TEST ASSEMBLY"
       },
       {
         title: "02 / Mechanism: Refined Linear Slide & Rail",
         description: "Detailed view of the active mechanical ribs and motor integration. Re-designed the slider track based on the fish's vertebrae, successfully reducing mechanical friction and allowing smooth pull-rising action of individual shapes without jamming.",
-        image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2070",
+        image: "/src/assets/images/Defensive pulse armature/10.webp",
         badge: "HARDWARE LINKAGE"
       },
       {
         title: "03 / Realization: Completed Active Defense Sculpture",
         description: "The fully printed and assembled wearable kinetic sculpture standing in high-speed, anxiety-triggered state. The physical spines rise collectively, creating a literal spatial buffer as defensive visual language.",
-        image: "/src/assets/images/regenerated_image_1781103736413.jpg",
+        image: "/src/assets/images/regenerated_image_1781103736413.webp",
         badge: "COMPLETED ARTIFACT"
       }
     ]
@@ -737,7 +737,7 @@ export const PROJECTS: Project[] = [
     challengeTitle: "Speculative Interventions & Physical Human Interfaces",
     challengeDescription: "A curated academic retrospective documenting five main milestone portfolios completed during studies abroad. Comprised of interactive therapeutic wear, eco-architectural rain receptors, speculative athletic ergonomics, organic fine-art installations, and communal relational art, this collection maps design interventions across the scales of body, community, and planetary landscape.",
     challengeDescriptionEn: "Bridging robust user-centered research, mechanical kinetic modeling, and speculative design narratives. The five central works—RehabStride, EverOneStage, SHEports, The Apology to the Black Sheep, and The Swim For You—serve as design blueprints to prompt physical rehabilitation, resource conservation, gender accessibility, critical ecological awareness, and cultural preservation.",
-    coverImage: "/src/assets/images/cover11.jpg",
+    coverImage: "/src/assets/images/cover11.webp",
     metrics: [
       { label: "Selected Projects", value: "5 Pieces" },
       { label: "Studies Span", value: "2020 - 2024" },
@@ -749,17 +749,17 @@ export const PROJECTS: Project[] = [
       {
         title: "01 / RehabStride",
         category: "01 / REHABSTRIDE — MEDICAL RETRAINING WEAR",
-        image: "/src/assets/images/留学作品集/portfolio-02.jpg",
+        image: "/src/assets/images/留学作品集/portfolio-02.webp",
         cursorLabel: "REHABSTRIDE",
         description: "RehabStride is an intelligent rehabilitation equipment and platform designed for patients with Chronic Ankle Instability (CAI). It features personalized, scientific rehabilitation plans, real-time monitoring of rehabilitation progress, and a user-friendly application for tracking and medical interaction. By balancing scientific rehabilitation processes with an enjoyable, individualized user experience, RehabStride significantly improves patient adherence and long-term recovery outcomes.",
         images: [
-          "/src/assets/images/留学作品集/portfolio-02.jpg",
-          "/src/assets/images/留学作品集/portfolio-03.jpg",
-          "/src/assets/images/留学作品集/portfolio-04.jpg",
-          "/src/assets/images/留学作品集/portfolio-05.jpg",
-          "/src/assets/images/留学作品集/portfolio-06.jpg",
-          "/src/assets/images/留学作品集/portfolio-07.jpg",
-          "/src/assets/images/留学作品集/portfolio-08.jpg"
+          "/src/assets/images/留学作品集/portfolio-02.webp",
+          "/src/assets/images/留学作品集/portfolio-03.webp",
+          "/src/assets/images/留学作品集/portfolio-04.webp",
+          "/src/assets/images/留学作品集/portfolio-05.webp",
+          "/src/assets/images/留学作品集/portfolio-06.webp",
+          "/src/assets/images/留学作品集/portfolio-07.webp",
+          "/src/assets/images/留学作品集/portfolio-08.webp"
         ],
         imageDetails: [
           {
@@ -802,18 +802,18 @@ export const PROJECTS: Project[] = [
       {
         title: "02 / EverOneStage",
         category: "02 / EVERONESTAGE — MONSOON WATER COLLECTOR",
-        image: "/src/assets/images/留学作品集/portfolio-09.jpg",
+        image: "/src/assets/images/留学作品集/portfolio-09.webp",
         cursorLabel: "EVERONESTAGE",
         description: "An eco-architectural pavilion prototype designed for high-density public areas in Kowloon, Hong Kong. It operates daily as a net-positive resource hub—employing a dual-flow siphon roof to harvest 1,500 liters of rain water monthly while utilizing low-latency Kinect computer vision cameras to host self-service public performance art.",
         images: [
-          "/src/assets/images/留学作品集/portfolio-09.jpg",
-          "/src/assets/images/留学作品集/portfolio-10.jpg",
-          "/src/assets/images/留学作品集/portfolio-11.jpg",
-          "/src/assets/images/留学作品集/portfolio-12.jpg",
-          "/src/assets/images/留学作品集/portfolio-13.jpg",
-          "/src/assets/images/留学作品集/portfolio-14.jpg",
-          "/src/assets/images/留学作品集/portfolio-15.jpg",
-          "/src/assets/images/留学作品集/portfolio-16.jpg"
+          "/src/assets/images/留学作品集/portfolio-09.webp",
+          "/src/assets/images/留学作品集/portfolio-10.webp",
+          "/src/assets/images/留学作品集/portfolio-11.webp",
+          "/src/assets/images/留学作品集/portfolio-12.webp",
+          "/src/assets/images/留学作品集/portfolio-13.webp",
+          "/src/assets/images/留学作品集/portfolio-14.webp",
+          "/src/assets/images/留学作品集/portfolio-15.webp",
+          "/src/assets/images/留学作品集/portfolio-16.webp"
         ],
         imageDetails: [
           {
@@ -861,17 +861,17 @@ export const PROJECTS: Project[] = [
       {
         title: "03 / SHEports",
         category: "03 / SHEPORTS — SPECULATIVE ACCESSSIBLE GEAR",
-        image: "/src/assets/images/留学作品集/portfolio-17.jpg",
+        image: "/src/assets/images/留学作品集/portfolio-17.webp",
         cursorLabel: "SHEPORTS",
         description: "SHEports is a speculative design framework and athletic gear kit engineered to address physiological safety discrepancies in extreme racing sports. Combining body-scanning algorithms with custom carbon-fiber weave patterns, SHEports creates a modular safety harness and rib guardian specifically adjusted to female torso geometry, protecting internal organs against high impact forces.",
         images: [
-          "/src/assets/images/留学作品集/portfolio-17.jpg",
-          "/src/assets/images/留学作品集/portfolio-18.jpg",
-          "/src/assets/images/留学作品集/portfolio-19.jpg",
-          "/src/assets/images/留学作品集/portfolio-20.jpg",
-          "/src/assets/images/留学作品集/portfolio-21.jpg",
-          "/src/assets/images/留学作品集/portfolio-22.jpg",
-          "/src/assets/images/留学作品集/portfolio-23.jpg"
+          "/src/assets/images/留学作品集/portfolio-17.webp",
+          "/src/assets/images/留学作品集/portfolio-18.webp",
+          "/src/assets/images/留学作品集/portfolio-19.webp",
+          "/src/assets/images/留学作品集/portfolio-20.webp",
+          "/src/assets/images/留学作品集/portfolio-21.webp",
+          "/src/assets/images/留学作品集/portfolio-22.webp",
+          "/src/assets/images/留学作品集/portfolio-23.webp"
         ],
         imageDetails: [
           {
@@ -919,15 +919,15 @@ export const PROJECTS: Project[] = [
       {
         title: "04 / The Apology to the Black Sheep",
         category: "04 / THE APOLOGY TO THE BLACK SHEEP — INSTALLATION",
-        image: "/src/assets/images/留学作品集/portfolio-24.jpg",
+        image: "/src/assets/images/留学作品集/portfolio-24.webp",
         cursorLabel: "BLACK SHEEP",
         description: "An immersive multimedia gallery installation and critical design inquiry apologizing to the industrial-damaged landscapes of local agricultural communities. Combining a slow-moving, robotic terracotta soil-agitator with a synthetic eco-acoustic noise floor, the project invites audience steps to trigger tremors in regional soil vessels, exposing the immediate acoustic anxiety of human-caused environmental shifts.",
         images: [
-          "/src/assets/images/留学作品集/portfolio-24.jpg",
-          "/src/assets/images/留学作品集/portfolio-25.jpg",
-          "/src/assets/images/留学作品集/portfolio-26.jpg",
-          "/src/assets/images/留学作品集/portfolio-27.jpg",
-          "/src/assets/images/留学作品集/portfolio-28.jpg"
+          "/src/assets/images/留学作品集/portfolio-24.webp",
+          "/src/assets/images/留学作品集/portfolio-25.webp",
+          "/src/assets/images/留学作品集/portfolio-26.webp",
+          "/src/assets/images/留学作品集/portfolio-27.webp",
+          "/src/assets/images/留学作品集/portfolio-28.webp"
         ],
         imageDetails: [
           {
@@ -960,13 +960,13 @@ export const PROJECTS: Project[] = [
       {
         title: "05 / The Swim For You (Master’s Group Assignment)",
         category: "05 / THE SWIM FOR YOU — PUBLIC ART INSTALLATION",
-        image: "/src/assets/images/留学作品集/portfolio-29.jpg",
+        image: "/src/assets/images/留学作品集/portfolio-29.webp",
         cursorLabel: "SWIM FOR YOU",
         description: "An interactive public art intervention exploring relational aesthetics and psychogeographical memories of the historic Sai Wan Swimming Shed. Using physical lifebuoys, sensory light sequences, and printed inter-generational interviews, the project bridges individual narratives and community history, transforming local seawater-eroded artifacts into vessels of shared courage and cultural continuation.",
         images: [
-          "/src/assets/images/留学作品集/portfolio-29.jpg",
-          "/src/assets/images/留学作品集/portfolio-30.jpg",
-          "/src/assets/images/留学作品集/portfolio-31.jpg"
+          "/src/assets/images/留学作品集/portfolio-29.webp",
+          "/src/assets/images/留学作品集/portfolio-30.webp",
+          "/src/assets/images/留学作品集/portfolio-31.webp"
         ],
         imageDetails: [
           {

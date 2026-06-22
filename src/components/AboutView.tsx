@@ -2,7 +2,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { Sparkles, Mail, FileText, ArrowRight, Layers, Cpu, Award, Target, Eye, ShieldAlert, Crosshair, ChevronLeft, ChevronRight } from "lucide-react";
 // @ts-ignore
-import uploadedAvatar from "../assets/images/NICK.jpg";
+import uploadedAvatar from "../assets/images/NICK.webp";
 
 interface AboutViewProps {
   onClose: () => void;
@@ -209,6 +209,8 @@ export default function AboutView({ onClose, onHoverOn, onHoverOff }: AboutViewP
                 src={avatarSources[avatarIndex]}
                 onError={handleImageError}
                 referrerPolicy="no-referrer"
+                loading="lazy"
+                decoding="async"
                 className="w-full h-full object-cover contrast-105 group-hover:scale-[1.06] transition-all duration-700 ease-out select-none pointer-events-none"
                 alt="Nick Lu (Haoxuan Lu)"
               />

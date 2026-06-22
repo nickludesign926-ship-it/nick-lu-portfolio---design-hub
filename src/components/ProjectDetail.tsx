@@ -22,11 +22,11 @@ const getFallbackImage = (title: string, index: number = 0): string => {
   
   if (t.includes("rehab") || t.includes("ankle") || t.includes("stride") || t.includes("medical")) {
     const rehabImages = [
-      "/src/assets/images/留学作品集/portfolio-02.jpg",
-      "/src/assets/images/留学作品集/portfolio-03.jpg",
-      "/src/assets/images/留学作品集/portfolio-04.jpg",
-      "/src/assets/images/留学作品集/portfolio-05.jpg",
-      "/src/assets/images/留学作品集/portfolio-06.jpg",
+      "/src/assets/images/留学作品集/portfolio-02.webp",
+      "/src/assets/images/留学作品集/portfolio-03.webp",
+      "/src/assets/images/留学作品集/portfolio-04.webp",
+      "/src/assets/images/留学作品集/portfolio-05.webp",
+      "/src/assets/images/留学作品集/portfolio-06.webp",
     ];
     return rehabImages[index % rehabImages.length];
   }
@@ -149,6 +149,7 @@ function PortfolioProjectCard({ sub, sIdx, onHoverOn, onHoverOff, onOpenGallery 
           >
             <img
               src={currentImg}
+              decoding="async"
               className="w-full h-full object-cover group-hover:scale-[1.01] group-hover:opacity-100 transition-all duration-700 select-none pointer-events-none"
               alt={sub.title}
               onError={(e) => {
@@ -333,6 +334,26 @@ export default function ProjectDetail({
   // Auto scroll to top on mount
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "instant" as any });
+  }, [project.id]);
+
+  // Preload all gallery and concept images in background for butter-smooth transitions
+  useEffect(() => {
+    if (project.finalGallery) {
+      project.finalGallery.forEach((item) => {
+        if (item.image) {
+          const img = new Image();
+          img.src = item.image;
+        }
+      });
+    }
+    if (project.conceptGallery) {
+      project.conceptGallery.forEach((item) => {
+        if (item.image) {
+          const img = new Image();
+          img.src = item.image;
+        }
+      });
+    }
   }, [project.id]);
 
   // Find next project in array
@@ -567,10 +588,22 @@ export default function ProjectDetail({
           <div className="px-8 lg:px-16 mb-12 flex flex-col xl:flex-row justify-between items-start xl:items-end gap-8">
             <div>
               <span className="font-mono text-glacier text-[11px] tracking-[0.5em] uppercase">
-                {project.id === "accutone" ? "02 / Work Domains" : project.id === "shuangxin" ? "03 / Design Renderings" : "03 / Sub-assemblies"}
+                {project.id === "accutone" 
+                  ? "02 / Work Domains" 
+                  : project.id === "shuangxin" 
+                  ? "03 / Design Renderings" 
+                  : project.id === "defensive-pulse"
+                  ? "03 / Design Chronicle"
+                  : "03 / Sub-assemblies"}
               </span>
               <h2 className="text-3xl font-bold tracking-tighter mt-4 uppercase leading-tight">
-                {project.id === "accutone" ? "Multi-Dimensional Integration" : project.id === "shuangxin" ? "Design Proposal Showcase" : "Sub-mechanical Breakdown"}
+                {project.id === "accutone" 
+                  ? "Multi-Dimensional Integration" 
+                  : project.id === "shuangxin" 
+                  ? "Design Proposal Showcase" 
+                  : project.id === "defensive-pulse"
+                  ? "Development & Psychology Chronicle"
+                  : "Sub-mechanical Breakdown"}
               </h2>
             </div>
 
@@ -602,25 +635,23 @@ export default function ProjectDetail({
               >
                 {/* Slides view wrapper */}
                 <AnimatePresence mode="wait">
-                  {filteredSubworks.map((item, idx) => {
-                    if (idx !== activeSubWorkIdx) return null;
-                    return (
-                      <motion.div
-                        key={item.title}
-                        initial={{ opacity: 0, x: 20 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        exit={{ opacity: 0, x: -20 }}
-                        transition={{ duration: 0.4, ease: "easeInOut" }}
-                        className="absolute inset-0 w-full h-full"
-                      >
-                        <img
-                          src={item.image}
-                          className="w-full h-full object-cover opacity-85 group-hover:opacity-100 transition-opacity duration-500 select-none pointer-events-none"
-                          alt={item.title}
-                        />
-                      </motion.div>
-                    );
-                  })}
+                  {filteredSubworks[activeSubWorkIdx] && (
+                    <motion.div
+                      key={activeSubWorkIdx}
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      exit={{ opacity: 0 }}
+                      transition={{ duration: 0.35, ease: "easeInOut" }}
+                      className="absolute inset-0 w-full h-full"
+                    >
+                      <img
+                        src={filteredSubworks[activeSubWorkIdx].image}
+                        decoding="sync"
+                        className="w-full h-full object-cover opacity-85 group-hover:opacity-100 transition-opacity duration-500 select-none pointer-events-none"
+                        alt={filteredSubworks[activeSubWorkIdx].title}
+                      />
+                    </motion.div>
+                  )}
                 </AnimatePresence>
 
                 {/* Fade overlay on bottom */}
@@ -734,14 +765,21 @@ export default function ProjectDetail({
                     }}
                   >
                     {item.isVideo && item.videoUrl ? (
-                      <video
-                        src={item.videoUrl}
-                        className="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-75 transition-all duration-1000 pointer-events-none"
-                        autoPlay
-                        loop
-                        muted
-                        playsInline
-                      />
+                      <>
+                        <img
+                          src={item.image}
+                          className="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-0 transition-opacity duration-700 pointer-events-none"
+                          alt={item.title}
+                        />
+                        <video
+                          src={item.videoUrl}
+                          className="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-50 transition-opacity duration-700 pointer-events-none"
+                          autoPlay
+                          loop
+                          muted
+                          playsInline
+                        />
+                      </>
                     ) : (
                       <img
                         src={item.image}
@@ -1665,12 +1703,16 @@ export default function ProjectDetail({
           <div className="px-8 lg:px-16 mb-12 flex flex-col md:flex-row md:items-end justify-between gap-6">
             <div>
               <span className="font-mono text-glacier text-[11px] tracking-[0.5em] uppercase">
-                {project.id === "auramist" ? "03 / Sub-assemblies" : "04 / Final Realization"}
+                {project.id === "auramist" 
+                  ? "03 / Sub-assemblies" 
+                  : "04 / Final Realization"}
               </span>
               <h2 className="text-3xl font-bold tracking-tighter mt-4 uppercase">
-                {project.id === "auramist" ? "Sub-mechanical Breakdown" : "Physical Artifacts Photo Album"}
+                {project.id === "auramist" 
+                  ? "Sub-mechanical Breakdown" 
+                  : "Physical Artifacts Photo Album"}
               </h2>
-              <p className="text-titanium/60 text-xs sm:text-sm mt-3 max-w-xl font-light">
+              <p className="text-titanium/60 text-xs sm:text-sm mt-3 max-w-xl font-light font-sans">
                 {project.id === "auramist"
                   ? "A comprehensive design chronicle mapping the entire end-to-end development lifecycle of AuraMist—documenting initial participatory research, mechanical subsystem prototyping, thermal fluidic simulations, custom PCB electronics, and real-world clinical tryout assemblies."
                   : "A curated physical photographic collection of the completed artifact, engineering components, structural linkages, and close-up detail captures."}
@@ -1698,25 +1740,23 @@ export default function ProjectDetail({
                 >
                   {/* Slides view wrapper */}
                   <AnimatePresence mode="wait">
-                    {project.finalGallery.map((item, idx) => {
-                      if (idx !== activeFinalSlideIdx) return null;
-                      return (
-                        <motion.div
-                          key={item.title}
-                          initial={{ opacity: 0, x: 20 }}
-                          animate={{ opacity: 1, x: 0 }}
-                          exit={{ opacity: 0, x: -20 }}
-                          transition={{ duration: 0.4, ease: "easeInOut" }}
-                          className="absolute inset-0 w-full h-full"
-                        >
-                          <img
-                            src={item.image}
-                            className="w-full h-full object-cover opacity-85 group-hover:opacity-100 transition-opacity duration-500 select-none pointer-events-none"
-                            alt={item.title}
-                          />
-                        </motion.div>
-                      );
-                    })}
+                    {project.finalGallery[activeFinalSlideIdx] && (
+                      <motion.div
+                        key={activeFinalSlideIdx}
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        transition={{ duration: 0.35, ease: "easeInOut" }}
+                        className="absolute inset-0 w-full h-full"
+                      >
+                        <img
+                          src={project.finalGallery[activeFinalSlideIdx].image}
+                          decoding="sync"
+                          className="w-full h-full object-cover opacity-85 group-hover:opacity-100 transition-opacity duration-500 select-none pointer-events-none"
+                          alt={project.finalGallery[activeFinalSlideIdx].title}
+                        />
+                      </motion.div>
+                    )}
                   </AnimatePresence>
 
                   {/* Fade overlay on bottom */}
@@ -1811,6 +1851,8 @@ export default function ProjectDetail({
                       <img
                         src={artifact.image}
                         alt={artifact.title}
+                        decoding="async"
+                        loading="lazy"
                         className="w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-105 opacity-70 group-hover:opacity-90 pointer-events-none"
                       />
                       
@@ -1896,25 +1938,23 @@ export default function ProjectDetail({
               >
                 {/* Slides view wrapper */}
                 <AnimatePresence mode="wait">
-                  {project.conceptGallery.map((item, idx) => {
-                    if (idx !== activeConceptSlideIdx) return null;
-                    return (
-                      <motion.div
-                        key={item.title}
-                        initial={{ opacity: 0, x: 20 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        exit={{ opacity: 0, x: -20 }}
-                        transition={{ duration: 0.4, ease: "easeInOut" }}
-                        className="absolute inset-0 w-full h-full"
-                      >
-                        <img
-                          src={item.image}
-                          className="w-full h-full object-cover opacity-85 group-hover:opacity-100 transition-opacity duration-500 select-none pointer-events-none"
-                          alt={item.title}
-                        />
-                      </motion.div>
-                    );
-                  })}
+                  {project.conceptGallery[activeConceptSlideIdx] && (
+                    <motion.div
+                      key={activeConceptSlideIdx}
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      exit={{ opacity: 0 }}
+                      transition={{ duration: 0.35, ease: "easeInOut" }}
+                      className="absolute inset-0 w-full h-full"
+                    >
+                      <img
+                        src={project.conceptGallery[activeConceptSlideIdx].image}
+                        decoding="sync"
+                        className="w-full h-full object-cover opacity-85 group-hover:opacity-100 transition-opacity duration-500 select-none pointer-events-none"
+                        alt={project.conceptGallery[activeConceptSlideIdx].title}
+                      />
+                    </motion.div>
+                  )}
                 </AnimatePresence>
 
                 {/* Fade overlay on bottom */}

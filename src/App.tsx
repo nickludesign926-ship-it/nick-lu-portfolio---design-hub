@@ -7,8 +7,8 @@ import ProjectDetail from "./components/ProjectDetail";
 import AboutView from "./components/AboutView";
 import Markdown from "react-markdown";
 
-import inputFile0 from "./assets/images/input_file_0.png";
-import inputFile1 from "./assets/images/input_file_1.png";
+import inputFile0 from "./assets/images/input_file_0.webp";
+import inputFile1 from "./assets/images/input_file_1.png.webp";
 
 export default function App() {
   const [activeProject, setActiveProject] = useState<Project | null>(null);
@@ -106,19 +106,21 @@ export default function App() {
             className="w-full relative"
           >
             {/* Global Sticky Navigation */}
-            <nav className="fixed top-0 left-0 w-full h-20 flex items-center justify-between px-8 lg:px-16 border-b border-borderGray bg-[#0D0D0D]/85 backdrop-blur-md z-40 select-none">
-              <div 
+            <nav className="fixed top-0 left-0 w-full h-20 flex items-center justify-between px-4 sm:px-8 lg:px-16 border-b border-borderGray bg-[#0D0D0D]/85 backdrop-blur-md z-40 select-none">
+              <button 
+                type="button"
                 onClick={() => {
                   setActiveView("home");
                   setActiveProject(null);
                 }}
-                className="text-xl font-black tracking-tighter uppercase underline decoration-glacier/40 decoration-2 underline-offset-4 select-none cursor-none"
+                className="text-lg sm:text-xl font-black tracking-tighter uppercase underline decoration-glacier/40 decoration-2 underline-offset-4 select-none cursor-none bg-transparent border-0 outline-none p-0 focus-visible:ring-1 focus-visible:ring-glacier"
                 onMouseEnter={() => onHoverOn("NICK LU")}
                 onMouseLeave={onHoverOff}
+                aria-label="Nick Lu Home"
               >
                 NICK LU
-              </div>
-              <div className="hidden md:flex gap-8 text-[10px] font-mono tracking-[0.2em] uppercase items-center">
+              </button>
+              <div className="flex gap-4 sm:gap-8 text-[9px] sm:text-[10px] font-mono tracking-[0.15em] sm:tracking-[0.2em] uppercase items-center">
                 <button 
                   onClick={() => {
                     setActiveView("home");
@@ -128,7 +130,7 @@ export default function App() {
                       document.getElementById("works")?.scrollIntoView({ behavior: "smooth" });
                     }, 100);
                   }}
-                  className="hover:text-glacier transition-colors cursor-none bg-transparent border-none text-[10px] font-mono uppercase tracking-[0.2em] outline-none font-bold"
+                  className="hover:text-glacier transition-colors cursor-none bg-transparent border-none text-[9px] sm:text-[10px] font-mono uppercase tracking-[0.15em] sm:tracking-[0.2em] outline-none font-bold"
                 >
                   Projects
                 </button>
@@ -137,7 +139,7 @@ export default function App() {
                     setActiveView("about");
                     setActiveProject(null);
                   }}
-                  className={`hover:text-glacier transition-colors cursor-none bg-transparent border-none text-[10px] font-mono uppercase tracking-[0.2em] outline-none font-bold ${
+                  className={`hover:text-glacier transition-colors cursor-none bg-transparent border-none text-[9px] sm:text-[10px] font-mono uppercase tracking-[0.15em] sm:tracking-[0.2em] outline-none font-bold ${
                     activeView === "about" ? "text-glacier underline decoration-2 underline-offset-4" : ""
                   }`}
                 >
@@ -146,13 +148,13 @@ export default function App() {
 
                 <a href="mailto:nickludesign926@gmail.com" className="hover:text-glacier transition-colors cursor-none font-mono">Contact</a>
               </div>
-              <div className="text-[10px] font-mono border border-borderGray px-4 py-1.5 rounded-full uppercase tracking-[0.2em]">
+              <div className="hidden lg:block text-[10px] font-mono border border-borderGray px-4 py-1.5 rounded-full uppercase tracking-[0.2em]">
                 PORTFOLIO 2026
               </div>
             </nav>
 
             {/* Split Hero Entrance */}
-            <main className="w-full min-h-[90vh] lg:min-h-screen grid grid-cols-1 lg:grid-cols-2 pt-20 border-b border-borderGray">
+            <main className="w-full max-w-full overflow-hidden min-h-[90vh] lg:min-h-screen grid grid-cols-1 lg:grid-cols-2 pt-20 border-b border-borderGray">
               {/* Left Column Text Content */}
               <section className="flex flex-col justify-center px-[8%] border-r border-borderGray relative py-16 md:py-24">
                 <motion.div
@@ -170,7 +172,32 @@ export default function App() {
                     Expert in 3D modeling, CMF development, and end-to-end product realization—from complex electronic hardware prototyping to premium packaging design.
                   </p>
                   
-
+                  {/* Action Guidance Call to Action (CTA) */}
+                  <div className="pt-2 flex flex-wrap gap-4 select-none">
+                    <button
+                      onClick={() => {
+                        document.getElementById("works")?.scrollIntoView({ behavior: "smooth" });
+                      }}
+                      onMouseEnter={() => onHoverOn("EXPLORE")}
+                      onMouseLeave={onHoverOff}
+                      className="px-6 py-3.5 bg-glacier text-dark text-[10px] font-bold font-mono uppercase tracking-[0.2em] rounded-sm transition-all duration-300 hover:bg-cyan-400 focus-visible:ring-1 focus-visible:ring-glacier cursor-none flex items-center gap-2"
+                    >
+                      View Selected Works
+                      <span className="text-xs">↓</span>
+                    </button>
+                    
+                    <button
+                      onClick={() => {
+                        setActiveView("about");
+                        setActiveProject(null);
+                      }}
+                      onMouseEnter={() => onHoverOn("ABOUT ME")}
+                      onMouseLeave={onHoverOff}
+                      className="px-6 py-3.5 border border-borderGray hover:border-glacier hover:text-glacier text-white text-[10px] font-bold font-mono uppercase tracking-[0.2em] rounded-sm transition-all duration-300 cursor-none"
+                    >
+                      ABOUT ME
+                    </button>
+                  </div>
 
                   <div className="text-[10px] font-mono text-gray-500 uppercase tracking-widest pt-4">
                     Location: Hong Kong S.A.R // NICK LU DESIGN
@@ -180,7 +207,7 @@ export default function App() {
 
               {/* Right Column Hero Artwork with Stereoscopic Parallax and Spotlight Mask Reveal */}
               <section 
-                className="relative bg-[#0A0A0A] overflow-hidden group h-[50vh] lg:h-auto cursor-none border-b lg:border-b-0 border-borderGray flex items-center justify-center select-none"
+                className="relative bg-[#0A0A0A] overflow-hidden group h-[50vh] lg:h-auto max-w-full cursor-none border-b lg:border-b-0 border-borderGray flex items-center justify-center select-none"
                 onMouseEnter={() => {
                   onHoverOn("EXPLORE");
                   setHeroHover(true);
@@ -310,7 +337,8 @@ export default function App() {
                   }
 
                   return (
-                    <div
+                    <button
+                      type="button"
                       key={project.id}
                       onClick={() => {
                         setActiveProject(project);
@@ -318,9 +346,10 @@ export default function App() {
                       }}
                       onMouseEnter={() => onHoverOn("VIEW CASE")}
                       onMouseLeave={onHoverOff}
-                      className={`project-card group relative bg-dark p-8 sm:p-12 min-h-[500px] sm:min-h-[550px] md:min-h-[600px] flex flex-col justify-between overflow-hidden cursor-none transition-all duration-500 border-b border-borderGray hover:bg-[#111]/30 ${alignmentClass}`}
+                      className={`project-card group text-left w-full relative bg-dark p-8 sm:p-12 min-h-[500px] sm:min-h-[550px] md:min-h-[600px] flex flex-col justify-between overflow-hidden cursor-none transition-all duration-500 border-b border-borderGray hover:bg-[#111]/30 focus:outline-none focus-visible:ring-1 focus-visible:ring-glacier/80 focus-visible:bg-[#111]/20 ${alignmentClass}`}
+                      aria-label={`View case study: ${project.title}`}
                     >
-                      <div className="relative z-10 space-y-3">
+                      <div className="relative z-10 space-y-3 pointer-events-none">
                         <span className="font-mono text-[9px] sm:text-[10px] text-glacier block underline uppercase tracking-wider">
                           0{index + 1} / {project.categoryLabel}
                         </span>
@@ -339,12 +368,12 @@ export default function App() {
                       />
 
                       {/* Bottom action indicator */}
-                      <div className="relative z-10 w-full mt-6">
+                      <div className="relative z-10 w-full mt-6 pointer-events-none">
                         <div className="flex justify-end pt-4 border-t border-borderGray/20">
                           <div className="w-10 h-[1.5px] bg-glacier/50 group-hover:w-20 transition-all duration-500" />
                         </div>
                       </div>
-                    </div>
+                    </button>
                   );
                 })}
               </div>
@@ -361,17 +390,17 @@ export default function App() {
             {/* Site Footer */}
             <footer className="w-full py-16 px-8 border-t border-borderGray bg-dark">
               <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-8">
-                <div>
+                <div className="w-full md:w-auto">
                   <a
                     href="mailto:nickludesign926@gmail.com"
                     onMouseEnter={() => onHoverOn("MAIL")}
                     onMouseLeave={onHoverOff}
-                    className="text-3xl sm:text-5xl md:text-6xl font-black tracking-tighter hover:text-glacier transition-colors cursor-none uppercase text-white inline-block"
+                    className="text-2xl xs:text-3xl sm:text-5xl md:text-6xl font-black tracking-tighter hover:text-glacier transition-colors cursor-none uppercase text-white inline-block break-all sm:break-normal max-w-full"
                   >
                     nickludesign926@gmail.com
                   </a>
                 </div>
-                <div className="text-right text-gray-600 font-mono text-[8px] sm:text-[9px] uppercase tracking-widest leading-loose">
+                <div className="text-left md:text-right text-gray-600 font-mono text-[8px] sm:text-[9px] uppercase tracking-widest leading-loose shrink-0">
                   Designed by NICK LU // © 2026 Hong Kong // Engineered by AI Studio
                 </div>
               </div>
